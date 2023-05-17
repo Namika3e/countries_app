@@ -8,7 +8,7 @@ import {  Routes, Route} from "react-router-dom";
 import Header from "./Header";
 import IndividualCountry from "./IndividualCountry";
 
-export default function Home (props) {
+export default function Home(props) {
   const [data , setData] = useState([]);
   const [regions , setRegions] = useState('All');
 

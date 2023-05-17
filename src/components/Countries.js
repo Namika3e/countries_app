@@ -20,6 +20,7 @@ export default function Countries(props) {
     const eachCountry = data.map(countries => {
         if (regions === countries.region) {
           return (
+          <div className="countries">
          <Link to = {`/countries/${countries.name.common}`} key={countries.name.common} className ="link countries-section-box"> <section className="countries-section pt" >
             <div className="countries-div-box" style={styles}>
                     <div className="flags-img-box"><img src={countries.flags.png} alt="country flag" className="flags-img"/></div>
@@ -30,10 +31,11 @@ export default function Countries(props) {
                     <p><span>Capital:</span> {countries.capital}</p>
                    </div>
                     </div>
-                    </section></Link>  
+                    </section></Link></div>
           )
         } else if (regions === 'All') {
           return (
+            <div className="countries">
             <Link to = {`/countries/${countries.name.common}`} key={countries.name.common} className="link countries-section-box"> <section className="countries-section pt" >
             <div className="countries-div-box" style={styles}>
                     <div className="flags-img-box"><img src={countries.flags.png} alt="country flag" className="flags-img"/></div>
@@ -44,22 +46,20 @@ export default function Countries(props) {
                     <p><span>Capital:</span> {countries.capital}</p>
                    </div>
                     </div>
-                    </section></Link>  
+                    </section></Link></div>
           )
         }
       })
 
 
-      // box-shadow: 0 0 10px hsl(0, 0%, 85%);
-
+    
 
 
 
     return(
         <main className="each-country-box">
            {eachCountry}
-
-        </main>
+           </main>
     )
 }
 

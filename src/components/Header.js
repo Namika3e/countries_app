@@ -17,7 +17,7 @@ let styles = props.darkMode ? {
         <header className="header" style={styles}>
             <h2 className ={textColor1}>Where in the world?</h2>
             <div className="dark-mode-box" onClick={ props.handleClick }>
-                <div className="icon-box"><img src={image} alt="" className="icon-img"/></div>
+                <div className="icon-box"><img src={image} alt="img" className="icon-img"/></div>
                 <p className={textColor}>Dark Mode</p>
             </div>
         </header>

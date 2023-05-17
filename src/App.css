@@ -35,7 +35,7 @@ span {
   padding: 2rem 1rem;
   display: flex;
   justify-content: space-between;
-  position: absolute;
+  position: relative;
   width: 100%;
   /* box-shadow: 0 0 50px hsl(0, 0%, 85%); */
 }
@@ -54,6 +54,7 @@ span {
 .dark-mode-box {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .dark-mode-text {
   font-weight: 600;
@@ -66,11 +67,12 @@ span {
 
 /* ---------------------------------------- SEARCH BAR ----------------------------------------------------- */
 .search-bar-section {
-  padding-top: 8rem;
+  padding-top: 2rem;
   display: flex;
   flex-direction: column;
   padding-inline: 1rem;
   position: relative;
+  /* background-color: red; */
 }
 
 .suggestion-box {
@@ -78,7 +80,7 @@ span {
   border-radius: 4px;
   padding-bottom: 8px;
   position: absolute;
-  top: 215px;
+  top:118px;
   width: 93%;
   
 }
@@ -103,6 +105,8 @@ span {
 
 }
 
+
+
 .search-bar-div::before {
   content: url('/public/icons/search-icon.png');
   position: absolute;
@@ -116,8 +120,6 @@ span {
   font-size: .9rem;
   opacity: .5;
   font-weight: 300;
-  
-  
 }
 
 .search-bar-div {
@@ -139,19 +141,13 @@ span {
 .link {
   text-decoration: none;
   color: hsl(200, 15%, 8%);
+  /* overflow: hidden; */
 }
 
 .height {
   min-height: 100vh;
   margin-top: 0;
 }
-
-.red {
-  /* background-color: red; */
-  /* margin-top: 1px; */
-  /* z-index: -1; */
-}
-
 
 
 /* ---------------------------------------- DROP DOWN ----------------------------------------------------- */
@@ -189,15 +185,17 @@ select > option {
 
 .countries-div-box {
   background-color: hsl(0, 0%, 100%);
-  margin-bottom: 4rem;
+  /* margin-bottom: 4rem; */
   border-radius: 6px;
-  /* box-shadow: 0 0 10px hsl(0, 0%, 85%); */
+}
+
+.countries {
+  padding-inline: 1rem;
+  padding-bottom: 1rem;
+
 }
 
 
-.countries-section {
-  padding-inline: 2.5rem;
-}
 
 
 .flags-img {
@@ -210,6 +208,7 @@ select > option {
 
 .flags-img-box {
   height: 12rem;
+  
   }
 
 .countries-info-textbox {
@@ -322,11 +321,6 @@ select > option {
   padding: 2rem 0;
 }
 
-/* .you {
-  background-color: red;
-  height: 100vh;
-  padding: 0;
-} */
 
 .individual-country-main-box {
   padding-top: 8rem;
@@ -351,20 +345,41 @@ select > option {
   .each-country-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    /* display: flex; */
     width: 100%;
-    
+    /* flex-wrap: wrap; */
+    }
 
-  }
+    .countries {
+    display: inline-block;
+      
+      /* width: 100%; */
+      /* padding-inline: 1rem;
+      padding-block: 0px;
+      flex-grow: 1;
+      flex-shrink: 1;
+      width: 320px; */
+}
 
   .countries-section {
-    padding: 0;
+    /* padding: 2rem; */
     font-size: .8rem;
+    width: 100%;
+    /* background-color: red; */
+    /* margin-left: 2rem; */
+    
   }
 
 
   .countries-section-box {
-    padding: 2rem;
+    /* padding: 2rem;  */
+    width: 100%;
+    padding: 0px;
+    /* background-color: red; */
+
   }
+
+
 
   .countries-info-textbox h2 {
     padding-top: 0;
@@ -405,23 +420,32 @@ select > option {
   display: grid;
   grid-template-columns: 460px 20%;
   justify-content: space-between;
-  padding: 8rem 3rem 0 3rem;
-  margin: 0;
-border: none;}
+  padding: 5rem 3rem 0 3rem;
+  /* margin-top: 0; */
+  border: none;
+  align-items: center;
+}
 
 .drop-down-div {
   width: 100%;
-  margin-bottom: 10px;
+  display: inline-block;
+  margin-bottom: 15px;
 }
 
 .search-bar-section {
   padding: 0;
+  margin-top: 4px;
   position: relative;
+  /* background-color: red; */
+}
+.drop-down-section {
+  /* background-color: green; */
+  
 }
 
 .search-bar-div {
-  margin-top: 2rem;
   padding: 0;
+  /* background-color: green; */
 
 }
 
@@ -430,7 +454,7 @@ border: none;}
 }
 .suggestion-box {
   position: absolute;
-  top: 100px;
+  top: 4rem;
   width: 100%;
 }
 

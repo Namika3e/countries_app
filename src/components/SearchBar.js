@@ -20,7 +20,8 @@ export default function SearchBar(props) {
     let inputStyle = props.darkMode ? {
         backgroundColor : "hsl(209, 23%, 22%)",
         boxShadow: "none",
-        color: "hsl(0, 0%, 100%)"
+        color: "hsl(0, 0%, 100%)",
+        '::placeHolder': { color: 'white' }
     }
         : {
             backgroundColor : "hsl(0, 0%, 100%)",
